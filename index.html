@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГАМА ГРАДБА</title>
+    <link rel="icon" href="sliki/logobrauser.png" type="image/png" />
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+    </style>
+
+
+</head>
+<body class="text-white overflow-x-hidden bg-gradient-to-r from-[#1F4822] via-[#2B2C2C] to-black scroll-smooth">
+        <!-- NAVBAR COMPONENT -->
+    <div class="text-white mb-[50px]">
+        <div class="bg-white text-[#1F4822] px-4 md:px-[100px] py-[20px]">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html">
+                    <img class="w-[150px] md:w-[200px]" src="sliki/logopng.png" alt="">
+                </a>
+
+                <!-- Hamburger Button (Mobile) -->
+                <!-- <button id="menu-toggle" class="md:hidden text-[#1F4822] focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button> -->
+
+                <!-- Contact Info (Hidden on mobile) -->
+                <div class="hidden md:flex gap-[50px] text-sm">
+                    <div class="flex gap-[15px] items-center">
+                        <img class="w-[24px] h-[24px]" src="sliki/home-address (2).png" alt="">
+                        <div class="flex flex-col pr-[50px] border-r border-gray-400">
+                            <p>ул. 1 бр. 1 Љубош</p>
+                            <p>1000 Скопје, Македонија</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-[15px] items-center">
+                        <img class="w-[24px] h-[24px]" src="sliki/clock.png" alt="">
+                        <div class="flex flex-col pr-[50px] border-r border-gray-400">
+                            <p>Пон-Пет</p>
+                            <p>08:00 - 16:00</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-[15px] items-center">
+                        <img class="h-[24px] w-[24px]" src="sliki/telephone (1).png" alt="">
+                        <div class="flex flex-col">
+                            <p>+389 (0) 2 613 0652</p>
+                            <p>gamagradba@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            
+        </div>
+    </div>
+    <div id="menu" class="flex md:flex justify-center gap-[30px] md:flex-row md:justify-center md:gap-[30px] py-[10px] -mt-[50px] text-white bg-gradient-to-r from-[#1F4822] via-[#2B2C2C] to-black md:bg-transparent">
+                <a href="/index.html" class="relative group text-gray-400 text-center py-2 md:py-0">ПОЧЕТНА
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-400 transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="/projects.html" class="relative group text-center py-2 md:py-0">ПРОЕКТИ
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="relative group text-center py-2 md:py-0">МАШИНЕРИЈА
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="/kontakt.html" class="relative group text-center py-2 md:py-0">КОНТАКТ
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
+                </a>
+    </div>
+
+
+        <!-- <div class="whitespace-nowrap flex justify-between text-xl pt-[15px] relative z-30 bg-gradient-to-l from-[#1F4822] via-[#2B2C2C] to-black pb-[15px]">
+            <div class="ml-[50px]"> 
+                <a href="/index.html">ГАМА ГРАДБА</a>
+            </div>
+            <div class="flex gap-[20px] mr-[50px] text-white">
+                <a href="/index.html" class="relative group text-gray-900">ПОЧЕТНА
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-900 transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="/projects.html" class="relative group">ПРОЕКТИ
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="relative group">МАШИНЕРИЈА
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
+                </a>
+                <a href="/kontakt.html" class="relative group">КОНТАКТ
+                    <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
+                </a>
+            </div>
+        </div> -->
+        <!-- <div>
+            <div>
+                <img class="absolute top-0 left-0 w-full h-[800px] z-0" src="sliki/hero.png" alt="">
+            </div>
+        </div> -->
+
+        <div class="mt-[50px] h-[300px] md:h-[500px] mx-4 md:mx-[100px] overflow-hidden">
+            <img class="w-full h-full object-cover object-center" src="sliki/dva kamiona.jpg" alt="">
+        </div>
+
+
+
+        <!-- <div class="relative flex justify-center mt-[300px] opacity-100 z-30 m-auto">
+            <div class="flex-col items-center justify-center">
+                <div><p class="text-6xl">ГАМА ГРАДБА</p></div>
+                <div><p class="text-3xl">ГРАДИМЕ ИДНИНА</p></div>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="mx-[100px] mt-[100px] z-50">
+        <!-- Section 1 -->
+        <div class="flex flex-col md:flex-row relative">
+            <div class="z-50 w-full bg-[#1F4822] relative md:static h-[300px] md:h-auto">
+                <img class="absolute md:static w-full h-full" src="sliki/dva_bagera_846x875.jpg" alt="">
+            </div>
+            <div class="w-full flex items-center justify-center px-4 md:px-0 mt-[50px] md:mt-0">
+                <div class="w-full md:w-10/12 text-center md:text-left">
+                    <p class="text-3xl md:text-5xl mb-[20px] md:mb-[30px]">ГАМА ГРАДБА</p>
+                    <p>
+                        Гама Градба е македонска градежна компанија со 
+                        силна посветеност кон квалитет, сигурност и професионализам.
+                        Со години искуство во изведба на објекти од секаков тип – од
+                        станбени и деловни до инфраструктурни проекти – го градиме секој
+                        проект со внимание до последен детал. Нашиот тим се состои од искусни
+                        инженери, техничари и занаетчии кои секогаш се водат од принципите на
+                        безбедност, прецизност и навремена реализација. Во Гама Градба не градиме 
+                        само објекти – градиме доверба.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clients Logos Section -->
+        <div class="w-full mt-[50px] md:mt-[50px] px-4 md:px-0">
+            <div class="flex flex-wrap justify-center md:justify-between gap-4">
+                <img src="sliki/beton-1.jpg" alt="" class="w-[100px] md:w-auto">
+                <img src="sliki/Evn-1.jpg" alt="" class="w-[100px] md:w-auto">
+                <img src="sliki/Konti-1.jpg" alt="" class="w-[100px] md:w-auto">
+                <img src="sliki/Neotel-1.jpg" alt="" class="w-[100px] md:w-auto">
+                <img src="sliki/Tav-1.jpg" alt="" class="w-[100px] md:w-auto">
+                <img src="sliki/Telekom-1.jpg" alt="" class="w-[100px] md:w-auto">
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="flex flex-col-reverse md:flex-row relative mt-[50px]">
+            <div class="w-full flex items-center justify-center px-4 md:px-0 mt-[40px] md:mt-0">
+                <div class="w-full md:w-10/12 text-center md:text-left">
+                    <p class="text-3xl md:text-5xl mb-[20px] md:mb-[30px]">Нашата Мисија</p>
+                    <p>
+                        Нашата мисија е да градиме квалитетни, 
+                        безбедни и трајни објекти кои ги надминуваат
+                        очекувањата на клиентите. Стремиме кон иновации,
+                        ефикасност и одржливост во секој проект, вложувајќи
+                        ја нашата експертиза и посветеност за да создадеме
+                        подобра и посигурна средина за живеење и работа.
+                    </p>
+                </div>
+            </div>
+            <div class="z-50 w-full bg-[#1F4822] relative md:static h-[300px] md:h-auto">
+                <img class="absolute md:static w-full h-full object-cover" src="sliki/kameno_bager_846x875.jpg" alt="">
+            </div>
+        </div>
+
+        
+
+        <div class="mt-[250px]">
+            <div class="flex justify-center">
+                <p class="text-5xl">Наши Проекти</p>
+            </div>
+            <div class="swiper mySwiper mt-[50px] overflow-visible">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-around gap-4 md:gap-0">
+                            <!-- Column 1 -->
+                            <div class="flex flex-col gap-4 md:justify-between">
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/proekt slika 1 (1).jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/proekt slika 2.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="flex flex-col gap-4 md:justify-between">
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/preokt slika 3.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/preokt slika 4.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 3 -->
+                            <div class="group relative bg-white mt-4 md:mt-0">
+                                <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/dva_kamiona_753x500.jpg" alt="">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                    <p>Проект</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            
+                    <!-- Duplicate this slide structure for additional slides -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-around gap-4 md:gap-0">
+                            <!-- Column 1 -->
+                            <div class="flex flex-col gap-4 md:justify-between">
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/proekt slika 1 (1).jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/proekt slika 2.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="flex flex-col gap-4 md:justify-between">
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/preokt slika 3.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/preokt slika 4.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 3 -->
+                            <div class="group relative bg-white mt-4 md:mt-0">
+                                <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/dva_kamiona_753x500.jpg" alt="">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                    <p>Проект</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-around gap-4 md:gap-0">
+                            <!-- Column 1 -->
+                            <div class="flex flex-col gap-4 md:justify-between">
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/proekt slika 1 (1).jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/proekt slika 2.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="flex flex-col gap-4 md:justify-between">
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/preokt slika 3.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                                <div class="group relative bg-white">
+                                    <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/preokt slika 4.jpg" alt="">
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                        <p>Проект</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 3 -->
+                            <div class="group relative bg-white mt-4 md:mt-0">
+                                <img class="border-2 border-white transition duration-200 group-hover:opacity-20" src="sliki/dva_kamiona_753x500.jpg" alt="">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                    <p>Проект</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                <!-- Swiper Navigation Buttons -->
+                <div class="swiper-button-next text-white -mr-[30px] z-30"></div>
+                <div class="swiper-button-prev text-white -ml-[30px] z-30"></div>
+            </div>
+            
+            <!-- <div class="mt-[50px] ">
+                <div class="flex justify-around">
+                    <div class="flex-col flex justify-between">
+                        <div class="group relative bg-white">
+                            <img class="border-2 border-white group transition   group-hover:opacity-20 group-hover:bg-white  text-center" src="sliki/download (6).png" alt="">
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                <p>proekt</p>
+                            </div>
+                        </div>
+                        <div class="group relative bg-white content-center">
+                            <img class="border-2 border-white group transition duration-200 group-hover:opacity-20 group-hover:bg-white  text-center" src="sliki/download (7).png" alt="">
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                <p>proekt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between">
+                        <div class="group relative bg-white content-center">
+                            <img class="border-2 border-white group transition duration-200 group-hover:opacity-20 group-hover:bg-white  text-center" src="sliki/download (8).png" alt="">
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                <p>proekt</p>
+                            </div>
+                        </div>
+                        <div class="group relative bg-white content-center">
+                            <img class="border-2 border-white group transition duration-200 group-hover:opacity-20 group-hover:bg-white  text-center" src="sliki/download (9).png" alt="">
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                                <p>proekt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative bg-white content-center">
+                        <img class="border-2 border-white group transition duration-200 group-hover:opacity-20 group-hover:bg-white  text-center" src="sliki/download (11).png" alt="">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 text-[#1F4822] transition duration-200">
+                            <p>proekt</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div id="kontakt" class="mt-[100px] -mx-[80px] md:mx-[1px] border-t-2 border-white flex flex-col md:flex-row items-start md:items-center justify-between px-4 md:px-0 gap-y-12">
+    
+            <!-- Contact Info -->
+            <div class="w-full md:w-1/3">
+                <div class="mb-[20px] border-b-0">
+                    <p class="text-3xl md:text-5xl font-bold">Контакт</p>
+                </div>
+                <div class="mt-[20px] flex flex-col gap-[20px]">
+                    <div class="flex gap-[15px] items-center">
+                        <img class="w-[24px] h-[24px]" src="sliki/home-address (1).png" alt="">
+                        <div class="flex flex-col">
+                            <p>ул. 1 бр. 1 Љубош</p>
+                            <p>1000 Скопје, Македонија</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-[15px] items-center">
+                        <img class="w-[24px] h-[24px]" src="sliki/email (1).png" alt="">
+                        <p>gamagradba@gmail.com</p>
+                    </div>
+                    <div class="flex gap-[15px] items-center">
+                        <img class="w-[24px] h-[24px]" src="sliki/telephone (2).png" alt="">
+                        <p>+389 (0) 2 613 0652</p>
+                    </div>
+                    <div class="flex gap-[15px] items-center mt-2">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img class="w-[30px] h-[30px]" src="sliki/facebook-logo-on-square.png" alt="">
+                        </a>
+                        <a href="viber://chat?number=38971408461" target="_blank">
+                            <img class="w-[30px] h-[30px]" src="sliki/viber (5).png" alt="">
+                        </a>
+                        <a href="https://wa.me/38971408461" target="_blank">
+                            <img class="w-[30px] h-[30px]" src="sliki/whatsapp (1).png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="w-full mt-[50px]">
+                <div class="flex flex-col gap-[30px] mx-auto md:mx-[100px]">
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <div class="flex flex-col gap-[10px] w-full md:w-1/2">
+                            <p>Име</p>
+                            <input class="bg-transparent text-white border-b-2 border-white focus:outline-none" type="text" name="name" id="name">
+                        </div>
+                        <div class="flex flex-col gap-[10px] w-full md:w-1/2">
+                            <p>Презиме</p>
+                            <input class="bg-transparent border-b-2 border-white focus:outline-none" type="text" name="surname" id="surname">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-[10px]">
+                        <p>Е-Пошта</p>
+                        <input class="bg-transparent border-b-2 border-white focus:outline-none" type="email" name="email" id="email">
+                    </div>
+                    <div class="flex flex-col gap-[10px]">
+                        <p>Порака</p>
+                        <textarea class="bg-transparent h-[100px] border-b-2 border-white focus:outline-none" name="message" id="message"></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button id="sendButton" class="border font-bold border-white w-full py-[5px] hover:bg-white hover:text-[#1F4822] transition duration-200">
+                            Испрати
+                        </button>
+                    </div>
+                    <p id="statusMessage" class="text-center text-white mt-2"></p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="w-full md:w-1/4 md:pr-[100px] mb-[50px]">
+                <div class="flex flex-col gap-[20px] text-center md:text-left">
+                    <a href="index.html" class="hover:underline">Дома</a>
+                    <a href="#" class="hover:underline">За нас</a>
+                    <a href="projects.html" class="hover:underline">Проекти</a>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop: true,  // Makes it loop infinitely
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          spaceBetween: 50, // Space between slides
+          slidesPerView: 1, // One slide at a time
+        });
+    </script>
+      
+    <script>
+        (function() {
+            emailjs.init("7uK2CmyLbGOPyMJjr"); // Replace with your actual Public Key
+        })();
+    
+        document.getElementById("sendButton").addEventListener("click", function(event) {
+            event.preventDefault();
+    
+            const name = document.getElementById("name").value;
+            const surname = document.getElementById("surname").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const statusMessage = document.getElementById("statusMessage");
+    
+            if (!name || !surname || !email || !message) {
+                statusMessage.innerHTML = "Пополнете ги сите полиња!";
+                statusMessage.style.color = "red";
+                return;
+            }
+    
+            const templateParams = {
+                name: name,
+                surname: surname,
+                email: email,
+                message: message
+            };
+    
+            emailjs.send("service_66wn74m", "template_tucdmpu", templateParams)
+            .then(function(response) {
+                statusMessage.innerHTML = "Вашата порака е успешно испратена!";
+                statusMessage.style.color = "green";
+                let name = document.getElementById("name").value = "";
+                let surname = document.getElementById("surname").value = "";
+                let email = document.getElementById("email").value = "";
+                let message = document.getElementById("message").value = "";
+            }, function(error) {
+                statusMessage.innerHTML = "Грешка при испраќање на пораката. Обидете се повторно!";
+                statusMessage.style.color = "red";
+            });
+        });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+
+
+    </script>
+    
+
+</body>
+</html>
